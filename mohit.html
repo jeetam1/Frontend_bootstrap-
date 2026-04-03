@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,46 +11,115 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: 'Segoe UI', sans-serif;
     }
 
+    /* NAVBAR */
+    .navbar {
+      background: #161b22;
+    }
+
+    /* HEADER */
     .header {
-      background: linear-gradient(to right, #1f4037, #99f2c8);
-      color: white;
-      padding: 60px 0;
+      background: linear-gradient(135deg, #1f2937, #111827);
+      padding: 100px 0 80px;
       text-align: center;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .header p {
+      color: #9ca3af;
+      font-size: 1.2rem;
+    }
+
+    /* PROFILE IMAGE FIX */
+    .profile-container {
+      text-align: center;
+      margin-top: -80px;
     }
 
     .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;   /* prevents stretching */
       border-radius: 50%;
-      border: 4px solid white;
-      margin-top: -70px;
+      border: 5px solid #0d1117;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 60px 0;
     }
 
     .section-title {
-      margin-top: 40px;
+      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    /* CARDS */
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      color: white;
+      backdrop-filter: blur(10px);
       transition: 0.3s;
     }
 
-    .footer {
-      background: #212529;
-      color: white;
-      padding: 15px;
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    /* SKILL CARD */
+    .skill-card {
       text-align: center;
-      margin-top: 40px;
+      padding: 15px;
+    }
+
+    /* FORM */
+    .form-control {
+      background: #161b22;
+      border: 1px solid #30363d;
+      color: white;
+    }
+
+    .form-control::placeholder {
+      color: #9ca3af;
+    }
+
+    /* BUTTON */
+    .btn-dark {
+      background: #238636;
+      border: none;
+    }
+
+    .btn-dark:hover {
+      background: #2ea043;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #161b22;
+      text-align: center;
+      padding: 15px;
+      color: #9ca3af;
     }
   </style>
 </head>
 
 <body>
 
-<!-- 🔹 Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Team Portfolio</a>
 
@@ -61,7 +130,7 @@
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="jeetam.html">Jeetam</a></li>
-        <li class="nav-item"><a class="nav-link active" href="mohit.html">Mohit</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Mohit</a></li>
         <li class="nav-item"><a class="nav-link" href="mrithunjay.html">Mrithunjay</a></li>
         <li class="nav-item"><a class="nav-link" href="kartik.html">Kartik</a></li>
       </ul>
@@ -69,85 +138,85 @@
   </div>
 </nav>
 
-<!-- 🔹 Header -->
+<!-- HEADER -->
 <section class="header">
-  <div class="container">
-    <h1 class="fw-bold">Mohit</h1>
-    <p class="lead">Frontend Developer | UI Designer</p>
+  <h1>Mohit</h1>
+  <p>Frontend Developer | UI Designer</p>
+</section>
+
+<!-- PROFILE -->
+<div class="profile-container">
+  <img src="images/mohit.jpg" class="profile-img">
+</div>
+
+<!-- ABOUT -->
+<section class="section container">
+  <h2 class="section-title">About Me</h2>
+  <p>
+    I am a frontend developer passionate about designing clean and responsive user interfaces.
+    I enjoy working with modern web technologies and continuously improving my design skills.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section container">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-3">
+      <div class="card skill-card">HTML</div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card skill-card">CSS</div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card skill-card">Bootstrap</div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card skill-card">JavaScript</div>
+    </div>
+
   </div>
 </section>
 
-<!-- 🔹 Profile -->
-<div class="container text-center">
-  <img src="images/mohit.jpg" width="150" class="profile-img">
-</div>
+<!-- PROJECTS -->
+<section class="section container">
+  <h2 class="section-title">Projects</h2>
 
-<!-- 🔹 About -->
-<div class="container">
-  <h3 class="section-title">About Me</h3>
-  <p>
-    I am a frontend developer with a strong interest in designing clean and responsive user interfaces.
-    I enjoy working with modern web technologies and creating visually appealing websites.
-    My focus is on improving user experience and building efficient designs.
-  </p>
-
-  <!-- 🔹 Skills -->
-  <h3 class="section-title">Skills</h3>
-  <div class="row">
-
-    <div class="col-md-3">
-      <div class="card text-center p-3 shadow">HTML</div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card text-center p-3 shadow">CSS</div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card text-center p-3 shadow">Bootstrap</div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="card text-center p-3 shadow">JavaScript</div>
-    </div>
-
-  </div>
-
-  <!-- 🔹 Projects -->
-  <h3 class="section-title">Projects</h3>
-  <div class="row">
+  <div class="row g-4">
 
     <div class="col-md-4">
-      <div class="card shadow">
-        <div class="card-body">
-          <h5>Responsive Website</h5>
-          <p>A fully responsive website built using Bootstrap and modern UI design principles.</p>
-        </div>
+      <div class="card p-3">
+        <h5>Responsive Website</h5>
+        <p>Built a fully responsive website using Bootstrap.</p>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card shadow">
-        <div class="card-body">
-          <h5>UI Design Project</h5>
-          <p>Designed user-friendly interfaces with focus on simplicity and usability.</p>
-        </div>
+      <div class="card p-3">
+        <h5>UI Design Project</h5>
+        <p>Designed modern user-friendly interfaces.</p>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card shadow">
-        <div class="card-body">
-          <h5>Landing Page</h5>
-          <p>Created a modern landing page layout for product showcase.</p>
-        </div>
+      <div class="card p-3">
+        <h5>Landing Page</h5>
+        <p>Created clean and modern landing page designs.</p>
       </div>
     </div>
 
   </div>
+</section>
 
-  <!-- 🔹 Contact -->
-  <h3 class="section-title">Contact</h3>
+<!-- CONTACT -->
+<section class="section container">
+  <h2 class="section-title">Contact</h2>
+
   <form>
     <div class="row">
       <div class="col-md-6 mb-3">
@@ -157,18 +226,18 @@
         <input type="email" class="form-control" placeholder="Your Email">
       </div>
     </div>
+
     <textarea class="form-control mb-3" placeholder="Message"></textarea>
+
     <button class="btn btn-dark">Send Message</button>
   </form>
+</section>
 
-</div>
-
-<!-- 🔹 Footer -->
+<!-- FOOTER -->
 <div class="footer">
   <p>© 2026 Mohit Portfolio</p>
 </div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
